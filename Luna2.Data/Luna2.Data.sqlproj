@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Animal.sql" />
+    <Build Include="dbo\Tables\Animal_x_Person.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\AnimalType.sql" />
