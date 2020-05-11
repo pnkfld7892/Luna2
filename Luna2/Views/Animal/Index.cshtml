@@ -1,0 +1,23 @@
+﻿@model AnimalViewModel
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Animal Name</th>
+                <th>Date Of Birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var animal in Model.Animals)
+            {
+                <tr>
+                    @animal.AnimalName
+                </tr>
+                <tr>
+                    @animal.DateOfBirth
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

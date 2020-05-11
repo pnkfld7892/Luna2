@@ -41,6 +41,7 @@ namespace Luna2
                 }
             );
 
+            //services.Config
             //services.AddRazorPages();
         }
 
