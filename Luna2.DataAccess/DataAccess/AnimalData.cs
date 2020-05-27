@@ -15,5 +15,18 @@ namespace Luna2.DataAccess.DataAccess
             var output = sql.LoadData<AnimalModel, dynamic>("dbo.spGetAllAnimals", new { });
             return output;
         }
+
+        public List<AnimalPersonModel> GetAllAnimalPersons()
+        {
+            SqlDataAccess sql = new SqlDataAccess();
+            var output = sql.LoadData<AnimalPersonModel, dynamic>("dbo.spGetAllAnimalPersons", new { });
+            return output;
+        }
+
+        public AnimalModel GetAnimalById(int id)
+        {
+            SqlDataAccess sql = new SqlDataAccess();
+            return sql.LoadData<AnimalModel, dynamic>("dbo.spGetAnimalById", new { Id = id }).FirstOrDefault();
+        }
     }
 }

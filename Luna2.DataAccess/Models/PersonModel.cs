@@ -8,10 +8,10 @@ namespace Luna2.DataAccess.Models
 {
     public class PersonModel
     {
-        int Id;
-        string FirstName;
-        string LastName;
-        string MiddleInitial;
+       public int Id;
+       public string FirstName;
+       public string LastName;
+       public string MiddleInitial;
 
     }
 }

@@ -11,17 +11,33 @@ namespace Luna2.Controllers
 {
     public class AnimalController : Controller
     {
+        private AnimalData animalData;
+        private PersonData personData;
+        public AnimalController()
+        {
+            animalData = new AnimalData();
+            personData = new PersonData();
+        }
         public IActionResult Index()
         {
 
-            return View(new AnimalViewModel(GetAllAnimals()));
+            return View(new AllAnimalViewModel(animalData.GetAllAnimals(),personData.GetAllPersons()));
+        }
+
+        public IActionResult AnimalDetail(int id)
+        {
+            return View(new AnimalDetailViewModel(animalData.GetAnimalById(id),GetAllPersons().FirstOrDefault()));
         }
 
         //Possibly open up later via API call
-        public List<AnimalModel> GetAllAnimals()
+       
+
+
+        private List<PersonModel> GetAllPersons()
         {
-            AnimalData data = new AnimalData();
-            return data.GetAllAnimals();
+            PersonData data = new PersonData();
+
+            return data.GetAllPersons();
         }
     }
 }

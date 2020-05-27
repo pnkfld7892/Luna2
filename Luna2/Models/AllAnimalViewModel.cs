@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Luna2.Models
 {
-    public class AnimalViewModel
+    public class AllAnimalViewModel
     {
-        public AnimalViewModel(List<AnimalModel> animals)
+        public AllAnimalViewModel(List<AnimalModel> animals,List<PersonModel> persons)
         {
             Animals = animals;
+            Persons = persons;
         }
         public List<AnimalModel> Animals { get; }
+        public List<PersonModel> Persons {get;}
     }
 }

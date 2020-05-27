@@ -65,6 +65,9 @@
     <Build Include="dbo\Tables\Animal.sql" />
     <Build Include="dbo\Tables\Animal_x_Person.sql" />
     <Build Include="dbo\StoreProcedures\spGetAllAnimals.sql" />
+    <Build Include="dbo\StoreProcedures\spGetAllAnimalPersons.sql" />
+    <Build Include="dbo\StoreProcedures\spGetAllPersons.sql" />
+    <Build Include="dbo\StoreProcedures\spGetAnimalById.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\AnimalType.sql" />

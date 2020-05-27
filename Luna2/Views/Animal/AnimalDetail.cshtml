@@ -1,0 +1,13 @@
+﻿@model AnimalDetailViewModel
+@{
+    ViewData["Title"] = $"Animal Detail - {Model.Animal.AnimalName}";
+}
+
+<div class="container">
+    <h3>Detail view for @Model.Animal.AnimalName</h3>
+    <div class="container">
+        @Html.LabelFor(model => model.Animal.AnimalName)
+        @Html.TextBoxFor(model => model.Animal.AnimalName)
+    </div>
+</div>
+

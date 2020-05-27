@@ -1,4 +1,4 @@
-﻿@model AnimalViewModel
+﻿@model AllAnimalViewModel
 
 <div class="container">
     <table class="table table-bordered">
@@ -6,16 +6,27 @@
             <tr>
                 <th>Animal Name</th>
                 <th>Date Of Birth</th>
+                <th>Person</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var animal in Model.Animals)
             {
                 <tr>
-                    @animal.AnimalName
-                </tr>
-                <tr>
-                    @animal.DateOfBirth
+                    <td>
+                        <a asp-controller="Animal" asp-action="AnimalDetail" asp-route-id="@animal.Id">@animal.AnimalName</a>
+                    </td>
+
+                    <td>
+                        @(
+                            animal.DateOfBirth.ToLocalTime().ToString("MM/dd/yyyy")
+                        )
+                    </td>
+                    <td>
+                        @(Model.Persons.Where(p => p.Id == animal.PersonId)
+                            .FirstOrDefault().FirstName
+                         )
+                    </td>
                 </tr>
             }
         </tbody>
