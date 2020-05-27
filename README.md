@@ -6,7 +6,7 @@ Re do old Luna project into .Net core 3.1
 * Something that I'm working on in spare time as a hobby project.
 * Ultimately a learning project to learn different tech that just EF.
 
-### Technologies used
+### Technologies used (so far)
 * .NET Core 3.1
 * MVC
 * Dapper
